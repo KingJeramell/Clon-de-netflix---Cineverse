@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineVerse — Streaming Premium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=Karla:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cineverse.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     RADIO / CHECKBOX CONTROLS (invisible)
+══════════════════════════════════════════ -->
+<input type="radio" name="hero" id="h1" checked>
+<input type="radio" name="hero" id="h2">
+<input type="radio" name="hero" id="h3">
+<input type="radio" name="hero" id="h4">
+
+<input type="radio" name="tab" id="tab-home" checked>
+<input type="radio" name="tab" id="tab-movies">
+<input type="radio" name="tab" id="tab-series">
+<input type="radio" name="tab" id="tab-list">
+
+<input type="checkbox" id="search-toggle">
+
+<!-- ══════════════════════════════════════════
+     PAGE WRAPPER
+══════════════════════════════════════════ -->
+<div class="page">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#" class="logo">
+      <div class="logo-icon">🎬</div>
+      <span class="logo-text">CINEVERSE</span>
+    </a>
+    <div class="nav-links">
+      <label for="tab-home"   class="nav-label">Inicio</label>
+      <label for="tab-movies" class="nav-label">Películas</label>
+      <label for="tab-series" class="nav-label">Series</label>
+      <label for="tab-list"   class="nav-label">Mi Lista</label>
+    </div>
+    <div class="nav-right">
+      <label for="search-toggle" class="btn-search-toggle">🔍</label>
+      <div class="avatar">👤</div>
+    </div>
+  </nav>
+
+  <!-- SEARCH BAR -->
+  <div class="search-bar-wrap">
+    <span style="color:var(--gold);font-size:18px;">🔍</span>
+    <input type="text" placeholder="Buscar películas, series, géneros…">
+    <label for="search-toggle" style="color:#888;font-size:22px;cursor:pointer;">×</label>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       HERO CAROUSEL
+  ══════════════════════════════════════════ -->
+  <div class="hero-section">
+
+    <!-- Slide 1 — Sci-Fi -->
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1400&q=80" alt="">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-tags">
+          <span class="tag tag-new">NUEVO</span>
+          <span class="tag tag-trending">TENDENCIA</span>
+        </div>
+        <h1 class="hero-title">HORIZONTE<br>CÓSMICO</h1>
+        <div class="hero-meta">
+          <span class="hero-rating">★★★★★ 9.1/10</span>
+          <span class="hero-year">2024 · 2h 18min</span>
+        </div>
+        <div class="hero-genres">
+          <span class="genre-pill">SCI-FI</span>
+          <span class="genre-pill">ACCIÓN</span>
+          <span class="genre-pill">AVENTURA</span>
+        </div>
+        <p class="hero-desc">Una misión al límite del universo conocido donde un equipo de astronautas descubre que el espacio tiene consciencia propia.</p>
+        <div class="hero-btns">
+          <a href="#modal-1" class="btn-play">▶ REPRODUCIR</a>
+          <a href="#modal-1" class="btn-info">ⓘ MÁS INFO</a>
+        </div>
+      </div>
+      <div class="hero-score">
+        <div class="score-num">9.1</div>
+        <div class="score-label">Puntuación</div>
+      </div>
+    </div>
+
+    <!-- Slide 2 — Historia -->
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1400&q=80" alt="">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-tags">
+          <span class="tag tag-exclusive">EXCLUSIVO</span>
+        </div>
+        <h1 class="hero-title">IMPERIO<br>DE SOMBRAS</h1>
+        <div class="hero-meta">
+          <span class="hero-rating">★★★★½ 8.7/10</span>
+          <span class="hero-year">2024 · 3h 02min</span>
+        </div>
+        <div class="hero-genres">
+          <span class="genre-pill">DRAMA</span>
+          <span class="genre-pill">HISTORIA</span>
+        </div>
+        <p class="hero-desc">Intrigas, traiciones y poder en los corredores más peligrosos de una dinastía que cambió el mundo para siempre.</p>
+        <div class="hero-btns">
+          <a href="#modal-2" class="btn-play">▶ REPRODUCIR</a>
+          <a href="#modal-2" class="btn-info">ⓘ MÁS INFO</a>
+        </div>
+      </div>
+      <div class="hero-score">
+        <div class="score-num">8.7</div>
+        <div class="score-label">Puntuación</div>
+      </div>
+    </div>
+
+    <!-- Slide 3 — Anime -->
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=1400&q=80" alt="">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-tags">
+          <span class="tag tag-hot">POPULAR</span>
+          <span class="tag tag-trending">TENDENCIA</span>
+        </div>
+        <h1 class="hero-title">TORMENTA<br>DE NEÓN</h1>
+        <div class="hero-meta">
+          <span class="hero-rating">★★★★★ 9.2/10</span>
+          <span class="hero-year">2024 · 1h 52min</span>
+        </div>
+        <div class="hero-genres">
+          <span class="genre-pill">ANIME</span>
+          <span class="genre-pill">ACCIÓN</span>
+        </div>
+        <p class="hero-desc">Una megaciudad es invadida por seres de otra dimensión. Solo una joven con poderes inestables puede cerrar la brecha.</p>
+        <div class="hero-btns">
+          <a href="#modal-9" class="btn-play">▶ REPRODUCIR</a>
+          <a href="#modal-9" class="btn-info">ⓘ MÁS INFO</a>
+        </div>
+      </div>
+      <div class="hero-score">
+        <div class="score-num">9.2</div>
+        <div class="score-label">Puntuación</div>
+      </div>
+    </div>
+
+    <!-- Slide 4 — Drama -->
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=1400&q=80" alt="">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-tags">
+          <span class="tag tag-exclusive">EXCLUSIVO</span>
+          <span class="tag tag-award">PREMIADO</span>
+        </div>
+        <h1 class="hero-title">TIERRA<br>Y SANGRE</h1>
+        <div class="hero-meta">
+          <span class="hero-rating">★★★★★ 9.3/10</span>
+          <span class="hero-year">2023 · 2h 45min</span>
+        </div>
+        <div class="hero-genres">
+          <span class="genre-pill">DRAMA</span>
+          <span class="genre-pill">FAMILIAR</span>
+        </div>
+        <p class="hero-desc">Tres generaciones de una familia latinoamericana cuyas vidas se entrelazan con décadas de historia, amor y redención.</p>
+        <div class="hero-btns">
+          <a href="#modal-6" class="btn-play">▶ REPRODUCIR</a>
+          <a href="#modal-6" class="btn-info">ⓘ MÁS INFO</a>
+        </div>
+      </div>
+      <div class="hero-score">
+        <div class="score-num">9.3</div>
+        <div class="score-label">Puntuación</div>
+      </div>
+    </div>
+
+    <!-- Carousel dots -->
+    <div class="hero-dots">
+      <label for="h1" class="hero-dot"></label>
+      <label for="h2" class="hero-dot"></label>
+      <label for="h3" class="hero-dot"></label>
+      <label for="h4" class="hero-dot"></label>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       CONTENT AREA
+  ══════════════════════════════════════════ -->
+  <div class="content-area">
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <label for="tab-home"   class="tab-label">🏠 Inicio</label>
+      <label for="tab-movies" class="tab-label">🎬 Películas</label>
+      <label for="tab-series" class="tab-label">📺 Series</label>
+      <label for="tab-list"   class="tab-label">📋 Mi Lista</label>
+    </div>
+
+    <!-- ── PANEL: HOME ──────────────────────── -->
+    <div id="panel-home" class="tab-content">
+
+      <div class="row-wrap">
+        <div class="section-title">🔥 EN TENDENCIA</div>
+        <div class="cards-row">
+
+          <a href="#modal-1" class="card" style="text-decoration:none;">
+            <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400&q=80" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-info">
+              <div class="card-tags"><span class="tag tag-new">NUEVO</span></div>
+              <div class="card-title">HORIZONTE CÓSMICO</div>
+              <div class="card-hover-info">
+                <div class="card-rating">★★★★★ 9.1/10</div>
+                <div class="card-meta">2024 · 2h 18min · Sci-Fi</div>
+                <div class="card-actions"><span class="btn-card-play">▶ VER</span></div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#modal-3" class="card" style="text-decoration:none;">
+            <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=400&q=80" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-info">
+              <div class="card-tags"><span class="tag tag-trending">TENDENCIA</span></div>
+              <div class="card-title">LUZ NOCTURNA</div>
+              <div class="card-hover-info">
+                <div class="card-rating">★★★★★ 8.9/10</div>
+                <div class="card-meta">2023 · 1h 54min · Thriller</div>
+                <div class="card-actions"><span class="btn-card-play">▶ VER</span></div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#modal-9" class="card" style="text-decoration:none;">
+            <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=400&q=80" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-info">
+              <div class="card-tags"><span class="tag tag-hot">POPULAR</span></div>
+              <div class="card-title">TORMENTA DE NEÓN</div>
+              <div class="card-hover-info">
+                <div class="card-rating">★★★★★ 9.2/10</div>
+                <div class="card-meta">2024 · 1h 52min · Anime</div>
+                <div class="card-actions"><span class="btn-card-play">▶ VER</span></div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#modal-12" class="card" style="text-decoration:none;">
+            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&q=80" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-info">
+              <div class="card-tags"><span class="tag tag-trending">TENDENCIA</span></div>
+              <div class="card-title">ENTRE PISOS</div>
+              <div class="card-hover-info">
+                <div class="card-rating">★★★★ 8.1/10</div>
+                <div class="card-meta">2024 · 1h 47min · Comedia</div>
+                <div class="card-actions"><span class="btn-card-play">▶ VER</span></div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#modal-5" class="card" style="text-decoration:none;">
+            <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&q=80" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-info">
+              <div class="card-tags"><span class="tag tag-hot">POPULAR</span></div>
+              <div class="card-title">AGENTE CERO</div>
+              <div class="card-hover-info">
+                <div class="card-rating">★★★★ 8.6/10</div>
+                <div class="card-meta">2024 · 2h 07min · Espionaje</div>
+                <div class="card-actions"><span class="btn-card-play">▶ VER</span></div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="row-wrap">
+        <div class="section-title">✨ NUEVOS ESTRENOS</div>
+        <div class="cards-row">
+
+          <a href="#modal-7" class="card" style="text-decoration:none;">
+            <img src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=400&q=80" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-info">
+              <div class="card-tags"><span class="tag tag-new">NUEVO</span></div>
+              <div class="card-title">HIELO ETERNO</div>
+              <div class="card-hover-info">
+                <div class="card-rating">★★★★★ 9.0/10</div>
+                <div class="card-meta">2024 · 1h 38min · Documental</div>
+                <div class="card-actions"><span class="btn-card-play">▶ VER</span></div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#modal-10" class="card" style="text-decoration:none;">
+            <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=400&q=80" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-info">
+              <div class="card-tags"><span class="tag tag-new">NUEVO</span></div>
+              <div class="card-title">PROFUNDIDAD</div>
+              <div class="card-hover-info">
+                <div class="card-rating">★★★★ 8.5/10</div>
+                <div class="card-meta">2023 · 2h 24min · Thriller</div>
+                <div class="card-actions"><span class="btn-card-play">▶ VER</span></div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#modal-4" class="card" style="text-decoration:none;">
+            <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=400&q=80" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-info">
+              <div class="card-tags"><span class="tag tag-award">PREMIADO</span></div>
+              <div class="card-title">POLVO Y VIENTO</div>
+              <div class="card-hover-info">
+                <div class="card-rating">★★★★ 8.4/10</div>
+                <div class="card-meta">2024 · 2h 31min · Western</div>
+                <div class="card-actions"><span class="btn-card-play">▶ VER</span></div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#modal-11" class="card" style="text-decoration:none;">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-info">
+              <div class="card-tags"><span class="tag tag-exclusive">EXCLUSIVO</span></div>
+              <div class="card-title">EL REINO DE VIDRIO</div>
+              <div class="card-hover-info">
+                <div class="card-rating">★★★★ 8.3/10</div>
+                <div class="card-meta">2024 · 2h 05min · Fantasía</div>
+                <div class="card-actions"><span class="btn-card-play">▶ VER</span></div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#modal-8" class="card" style="text-decoration:none;">
+            <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&q=80" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-info">
+              <div class="card-tags"><span class="tag tag-award">PREMIADO</span></div>
+              <div class="card-title">LA ÚLTIMA NOTA</div>
+              <div class="card-hover-info">
+                <div class="card-rating">★★★★ 8.8/10</div>
+                <div class="card-meta">2023 · 2h 12min · Drama</div>
+                <div class="card-actions"><span class="btn-card-play">▶ VER</span></div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="row-wrap">
+        <div class="section-title">👑 EXCLUSIVOS CINEVERSE</div>
+        <div class="cards-row">
+
+          <a href="#modal-2" class="card" style="text-decoration:none;">
+            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&q=80" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-info">
+              <div class="card-tags"><span class="tag tag-exclusive">EXCLUSIVO</span></div>
+              <div class="card-title">IMPERIO DE SOMBRAS</div>
+              <div class="card-hover-info">
+                <div class="card-rating">★★★★ 8.7/10</div>
+                <div class="card-meta">2024 · 3h 02min · Drama</div>
+                <div class="card-actions"><span class="btn-card-play">▶ VER</span></div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#modal-6" class="card" style="text-decoration:none;">
+            <img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=400&q=80" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-info">
+              <div class="card-tags">
+                <span class="tag tag-exclusive">EXCLUSIVO</span>
+                <span class="tag tag-award">PREMIADO</span>
+              </div>
+              <div class="card-title">TIERRA Y SANGRE</div>
+              <div class="card-hover-info">
+                <div class="card-rating">★★★★★ 9.3/10</div>
+                <div class="card-meta">2023 · 2h 45min · Drama</div>
+                <div class="card-actions"><span class="btn-card-play">▶ VER</span></div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#modal-11" class="card" style="text-decoration:none;">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-info">
+              <div class="card-tags"><span class="tag tag-exclusive">EXCLUSIVO</span></div>
+              <div class="card-title">EL REINO DE VIDRIO</div>
+              <div class="card-hover-info">
+                <div class="card-rating">★★★★ 8.3/10</div>
+                <div class="card-meta">2024 · 2h 05min · Fantasía</div>
+                <div class="card-actions"><span class="btn-card-play">▶ VER</span></div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </div><!-- /panel-home -->
+
+    <!-- ── PANEL: MOVIES ──────────────────────── -->
+    <div id="panel-movies" class="tab-content">
+      <div class="section-title">🎬 TODAS LAS PELÍCULAS</div>
+      <div class="featured-grid">
+        <a href="#modal-1"  style="text-decoration:none;" class="featured-card"><img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400&q=80" alt=""><div class="featured-info"><div class="featured-title">HORIZONTE CÓSMICO</div><div class="featured-sub">2024 · Sci-Fi · ★ 9.1</div></div></a>
+        <a href="#modal-2"  style="text-decoration:none;" class="featured-card"><img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&q=80" alt=""><div class="featured-info"><div class="featured-title">IMPERIO DE SOMBRAS</div><div class="featured-sub">2024 · Drama · ★ 8.7</div></div></a>
+        <a href="#modal-3"  style="text-decoration:none;" class="featured-card"><img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=400&q=80" alt=""><div class="featured-info"><div class="featured-title">LUZ NOCTURNA</div><div class="featured-sub">2023 · Thriller · ★ 8.9</div></div></a>
+        <a href="#modal-4"  style="text-decoration:none;" class="featured-card"><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=400&q=80" alt=""><div class="featured-info"><div class="featured-title">POLVO Y VIENTO</div><div class="featured-sub">2024 · Western · ★ 8.4</div></div></a>
+        <a href="#modal-5"  style="text-decoration:none;" class="featured-card"><img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&q=80" alt=""><div class="featured-info"><div class="featured-title">AGENTE CERO</div><div class="featured-sub">2024 · Espionaje · ★ 8.6</div></div></a>
+        <a href="#modal-6"  style="text-decoration:none;" class="featured-card"><img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=400&q=80" alt=""><div class="featured-info"><div class="featured-title">TIERRA Y SANGRE</div><div class="featured-sub">2023 · Drama · ★ 9.3</div></div></a>
+        <a href="#modal-7"  style="text-decoration:none;" class="featured-card"><img src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=400&q=80" alt=""><div class="featured-info"><div class="featured-title">HIELO ETERNO</div><div class="featured-sub">2024 · Documental · ★ 9.0</div></div></a>
+        <a href="#modal-8"  style="text-decoration:none;" class="featured-card"><img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&q=80" alt=""><div class="featured-info"><div class="featured-title">LA ÚLTIMA NOTA</div><div class="featured-sub">2023 · Drama · ★ 8.8</div></div></a>
+        <a href="#modal-9"  style="text-decoration:none;" class="featured-card"><img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=400&q=80" alt=""><div class="featured-info"><div class="featured-title">TORMENTA DE NEÓN</div><div class="featured-sub">2024 · Anime · ★ 9.2</div></div></a>
+        <a href="#modal-10" style="text-decoration:none;" class="featured-card"><img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=400&q=80" alt=""><div class="featured-info"><div class="featured-title">PROFUNDIDAD</div><div class="featured-sub">2023 · Thriller · ★ 8.5</div></div></a>
+        <a href="#modal-11" style="text-decoration:none;" class="featured-card"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt=""><div class="featured-info"><div class="featured-title">EL REINO DE VIDRIO</div><div class="featured-sub">2024 · Fantasía · ★ 8.3</div></div></a>
+        <a href="#modal-12" style="text-decoration:none;" class="featured-card"><img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&q=80" alt=""><div class="featured-info"><div class="featured-title">ENTRE PISOS</div><div class="featured-sub">2024 · Comedia · ★ 8.1</div></div></a>
+      </div>
+    </div><!-- /panel-movies -->
+
+    <!-- ── PANEL: SERIES ──────────────────────── -->
+    <div id="panel-series" class="tab-content">
+      <div class="section-title">📺 SERIES DESTACADAS</div>
+      <div class="featured-grid">
+        <a href="#modal-3"  style="text-decoration:none;" class="featured-card"><img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=400&q=80" alt=""><div class="featured-info"><div class="featured-title">LUZ NOCTURNA</div><div class="featured-sub">T1 · 8 eps · Thriller</div></div></a>
+        <a href="#modal-6"  style="text-decoration:none;" class="featured-card"><img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=400&q=80" alt=""><div class="featured-info"><div class="featured-title">TIERRA Y SANGRE</div><div class="featured-sub">T1–T3 · 30 eps · Drama</div></div></a>
+        <a href="#modal-9"  style="text-decoration:none;" class="featured-card"><img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=400&q=80" alt=""><div class="featured-info"><div class="featured-title">TORMENTA DE NEÓN</div><div class="featured-sub">T1 · 12 eps · Anime</div></div></a>
+        <a href="#modal-5"  style="text-decoration:none;" class="featured-card"><img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&q=80" alt=""><div class="featured-info"><div class="featured-title">AGENTE CERO</div><div class="featured-sub">T1–T2 · 16 eps · Espionaje</div></div></a>
+        <a href="#modal-2"  style="text-decoration:none;" class="featured-card"><img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&q=80" alt=""><div class="featured-info"><div class="featured-title">IMPERIO DE SOMBRAS</div><div class="featured-sub">T1 · 10 eps · Historia</div></div></a>
+        <a href="#modal-10" style="text-decoration:none;" class="featured-card"><img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=400&q=80" alt=""><div class="featured-info"><div class="featured-title">PROFUNDIDAD</div><div class="featured-sub">T1 · 6 eps · Thriller</div></div></a>
+      </div>
+    </div><!-- /panel-series -->
+
+    <!-- ── PANEL: MI LISTA ────────────────────── -->
+    <div id="panel-list" class="tab-content">
+      <div class="section-title">📋 MI LISTA</div>
+      <div class="watchlist-empty">
+        <div class="empty-icon">🎬</div>
+        <p style="font-size:18px;color:#888;margin-bottom:8px;">Tu lista está vacía</p>
+        <p style="font-size:13px;color:var(--muted);">Haz clic en "Guardar" en cualquier título para añadirlo aquí</p>
+        <br>
+        <label for="tab-home" style="display:inline-block;margin-top:12px;padding:10px 24px;background:var(--gold);color:#000;border-radius:7px;font-family:var(--font-title);letter-spacing:2px;cursor:pointer;font-size:15px;">EXPLORAR CATÁLOGO</label>
+      </div>
+    </div>
+
+  </div><!-- /content-area -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <div class="footer-logo-txt">CINEVERSE</div>
+      <p class="footer-tagline">Streaming premium.<br>Cine sin límites.<br>Arte sin fronteras.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Explorar</div>
+      <div class="footer-links">
+        <a href="#">Inicio</a><a href="#">Películas</a>
+        <a href="#">Series</a><a href="#">Documentales</a><a href="#">Anime</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Soporte</div>
+      <div class="footer-links">
+        <a href="#">Centro de Ayuda</a><a href="#">Privacidad</a>
+        <a href="#">Términos</a><a href="#">Cookies</a><a href="#">Contacto</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Idiomas</div>
+      <div class="footer-links">
+        <a href="#">Español</a><a href="#">English</a>
+        <a href="#">Português</a><a href="#">Français</a><a href="#">日本語</a>
+      </div>
+    </div>
+  </footer>
+  <div class="footer-bottom">© 2024 CineVerse · Todos los derechos reservados · Hecho con ❤️ y CSS puro</div>
+
+</div><!-- /page -->
+
+<!-- ══════════════════════════════════════════
+     MODALS (12 total) — :target trick
+══════════════════════════════════════════ -->
+
+<div id="modal-1" class="modal-backdrop">
+  <div class="modal-box">
+    <div class="modal-hero"><img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=900&q=80" alt=""><div class="modal-hero-grad"></div><a href="#" class="modal-close">×</a></div>
+    <div class="modal-body">
+      <div class="hero-tags" style="margin-bottom:12px;"><span class="tag tag-new">NUEVO</span><span class="tag tag-trending">TENDENCIA</span></div>
+      <div class="modal-title">HORIZONTE CÓSMICO</div>
+      <div class="modal-meta"><span style="color:var(--gold);font-size:16px;font-weight:700;">★★★★★ 9.1/10</span><span style="color:var(--muted);">2024</span><span style="color:var(--muted);">⏱ 2h 18min</span></div>
+      <div class="modal-genres"><span class="genre-pill">SCI-FI</span><span class="genre-pill">ACCIÓN</span><span class="genre-pill">AVENTURA</span></div>
+      <p class="modal-desc">Una misión al límite del universo conocido donde un equipo de astronautas descubre que el espacio tiene consciencia propia. Lo que comenzó como un viaje científico se convierte en el enfrentamiento más íntimo con el origen de toda existencia.</p>
+      <div class="modal-btns"><a href="#" class="btn-modal-play">▶ REPRODUCIR AHORA</a><a href="#" class="btn-info" style="display:inline-block;">+ MI LISTA</a></div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-2" class="modal-backdrop">
+  <div class="modal-box">
+    <div class="modal-hero"><img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=900&q=80" alt=""><div class="modal-hero-grad"></div><a href="#" class="modal-close">×</a></div>
+    <div class="modal-body">
+      <div class="hero-tags" style="margin-bottom:12px;"><span class="tag tag-exclusive">EXCLUSIVO</span></div>
+      <div class="modal-title">IMPERIO DE SOMBRAS</div>
+      <div class="modal-meta"><span style="color:var(--gold);font-size:16px;font-weight:700;">★★★★½ 8.7/10</span><span style="color:var(--muted);">2024</span><span style="color:var(--muted);">⏱ 3h 02min</span></div>
+      <div class="modal-genres"><span class="genre-pill">DRAMA</span><span class="genre-pill">HISTORIA</span></div>
+      <p class="modal-desc">Intrigas, traiciones y amor en los pasillos más peligrosos del mundo conocido. Un viaje a la raíz del poder en la dinastía más sangrienta que la humanidad haya conocido.</p>
+      <div class="modal-btns"><a href="#" class="btn-modal-play">▶ REPRODUCIR AHORA</a><a href="#" class="btn-info" style="display:inline-block;">+ MI LISTA</a></div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-3" class="modal-backdrop">
+  <div class="modal-box">
+    <div class="modal-hero"><img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=900&q=80" alt=""><div class="modal-hero-grad"></div><a href="#" class="modal-close">×</a></div>
+    <div class="modal-body">
+      <div class="hero-tags" style="margin-bottom:12px;"><span class="tag tag-trending">TENDENCIA</span></div>
+      <div class="modal-title">LUZ NOCTURNA</div>
+      <div class="modal-meta"><span style="color:var(--gold);font-size:16px;font-weight:700;">★★★★½ 8.9/10</span><span style="color:var(--muted);">2023</span><span style="color:var(--muted);">⏱ 1h 54min</span></div>
+      <div class="modal-genres"><span class="genre-pill">THRILLER</span><span class="genre-pill">CRIMEN</span></div>
+      <p class="modal-desc">En una ciudad donde los neones nunca se apagan, una detective con poderes empáticos caza a un asesino que solo existe en sueños. Cada pista la lleva más profundo hacia una realidad que no debería existir.</p>
+      <div class="modal-btns"><a href="#" class="btn-modal-play">▶ REPRODUCIR AHORA</a><a href="#" class="btn-info" style="display:inline-block;">+ MI LISTA</a></div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-4" class="modal-backdrop">
+  <div class="modal-box">
+    <div class="modal-hero"><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=900&q=80" alt=""><div class="modal-hero-grad"></div><a href="#" class="modal-close">×</a></div>
+    <div class="modal-body">
+      <div class="hero-tags" style="margin-bottom:12px;"><span class="tag tag-award">PREMIADO</span></div>
+      <div class="modal-title">POLVO Y VIENTO</div>
+      <div class="modal-meta"><span style="color:var(--gold);font-size:16px;font-weight:700;">★★★★ 8.4/10</span><span style="color:var(--muted);">2024</span><span style="color:var(--muted);">⏱ 2h 31min</span></div>
+      <div class="modal-genres"><span class="genre-pill">WESTERN</span><span class="genre-pill">AVENTURA</span></div>
+      <p class="modal-desc">En 1890, una fotógrafa cruza el desierto americano para documentar la extinción de una civilización que nadie quiere recordar. Un viaje al corazón de América y sus contradicciones más profundas.</p>
+      <div class="modal-btns"><a href="#" class="btn-modal-play">▶ REPRODUCIR AHORA</a><a href="#" class="btn-info" style="display:inline-block;">+ MI LISTA</a></div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-5" class="modal-backdrop">
+  <div class="modal-box">
+    <div class="modal-hero"><img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=900&q=80" alt=""><div class="modal-hero-grad"></div><a href="#" class="modal-close">×</a></div>
+    <div class="modal-body">
+      <div class="hero-tags" style="margin-bottom:12px;"><span class="tag tag-hot">POPULAR</span></div>
+      <div class="modal-title">AGENTE CERO</div>
+      <div class="modal-meta"><span style="color:var(--gold);font-size:16px;font-weight:700;">★★★★ 8.6/10</span><span style="color:var(--muted);">2024</span><span style="color:var(--muted);">⏱ 2h 07min</span></div>
+      <div class="modal-genres"><span class="genre-pill">ACCIÓN</span><span class="genre-pill">ESPIONAJE</span></div>
+      <p class="modal-desc">El agente más peligroso del mundo descubre que todas sus misiones fueron fabricadas para entrenar a su reemplazo perfecto. La lealtad y la identidad se desintegran en una trama que toca las más altas esferas del poder global.</p>
+      <div class="modal-btns"><a href="#" class="btn-modal-play">▶ REPRODUCIR AHORA</a><a href="#" class="btn-info" style="display:inline-block;">+ MI LISTA</a></div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-6" class="modal-backdrop">
+  <div class="modal-box">
+    <div class="modal-hero"><img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=900&q=80" alt=""><div class="modal-hero-grad"></div><a href="#" class="modal-close">×</a></div>
+    <div class="modal-body">
+      <div class="hero-tags" style="margin-bottom:12px;"><span class="tag tag-exclusive">EXCLUSIVO</span><span class="tag tag-award">PREMIADO</span></div>
+      <div class="modal-title">TIERRA Y SANGRE</div>
+      <div class="modal-meta"><span style="color:var(--gold);font-size:16px;font-weight:700;">★★★★★ 9.3/10</span><span style="color:var(--muted);">2023</span><span style="color:var(--muted);">⏱ 2h 45min</span></div>
+      <div class="modal-genres"><span class="genre-pill">DRAMA</span><span class="genre-pill">FAMILIAR</span></div>
+      <p class="modal-desc">Tres generaciones de una familia latinoamericana cuyas vidas se entrelazan con décadas de historia sin que ninguno lo haya elegido. Una historia de amor, sacrificio y redención que atraviesa medio siglo.</p>
+      <div class="modal-btns"><a href="#" class="btn-modal-play">▶ REPRODUCIR AHORA</a><a href="#" class="btn-info" style="display:inline-block;">+ MI LISTA</a></div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-7" class="modal-backdrop">
+  <div class="modal-box">
+    <div class="modal-hero"><img src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=900&q=80" alt=""><div class="modal-hero-grad"></div><a href="#" class="modal-close">×</a></div>
+    <div class="modal-body">
+      <div class="hero-tags" style="margin-bottom:12px;"><span class="tag tag-new">NUEVO</span></div>
+      <div class="modal-title">HIELO ETERNO</div>
+      <div class="modal-meta"><span style="color:var(--gold);font-size:16px;font-weight:700;">★★★★★ 9.0/10</span><span style="color:var(--muted);">2024</span><span style="color:var(--muted);">⏱ 1h 38min</span></div>
+      <div class="modal-genres"><span class="genre-pill">DOCUMENTAL</span><span class="genre-pill">NATURALEZA</span></div>
+      <p class="modal-desc">Los últimos glaciares del planeta narran su propia historia de millones de años, sabiéndose condenados por el calentamiento global. Una elegía visual de impresionante belleza sobre lo que estamos perdiendo.</p>
+      <div class="modal-btns"><a href="#" class="btn-modal-play">▶ REPRODUCIR AHORA</a><a href="#" class="btn-info" style="display:inline-block;">+ MI LISTA</a></div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-8" class="modal-backdrop">
+  <div class="modal-box">
+    <div class="modal-hero"><img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=900&q=80" alt=""><div class="modal-hero-grad"></div><a href="#" class="modal-close">×</a></div>
+    <div class="modal-body">
+      <div class="hero-tags" style="margin-bottom:12px;"><span class="tag tag-award">PREMIADO</span></div>
+      <div class="modal-title">LA ÚLTIMA NOTA</div>
+      <div class="modal-meta"><span style="color:var(--gold);font-size:16px;font-weight:700;">★★★★ 8.8/10</span><span style="color:var(--muted);">2023</span><span style="color:var(--muted);">⏱ 2h 12min</span></div>
+      <div class="modal-genres"><span class="genre-pill">DRAMA</span><span class="genre-pill">MÚSICA</span></div>
+      <p class="modal-desc">Un compositor sordo en el siglo XIX que escribe su obra más sublime guiado únicamente por las vibraciones del mundo que ya no puede escuchar. Una historia sobre cómo el arte sobrevive cuando los sentidos fallan.</p>
+      <div class="modal-btns"><a href="#" class="btn-modal-play">▶ REPRODUCIR AHORA</a><a href="#" class="btn-info" style="display:inline-block;">+ MI LISTA</a></div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-9" class="modal-backdrop">
+  <div class="modal-box">
+    <div class="modal-hero"><img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=900&q=80" alt=""><div class="modal-hero-grad"></div><a href="#" class="modal-close">×</a></div>
+    <div class="modal-body">
+      <div class="hero-tags" style="margin-bottom:12px;"><span class="tag tag-hot">POPULAR</span><span class="tag tag-trending">TENDENCIA</span></div>
+      <div class="modal-title">TORMENTA DE NEÓN</div>
+      <div class="modal-meta"><span style="color:var(--gold);font-size:16px;font-weight:700;">★★★★★ 9.2/10</span><span style="color:var(--muted);">2024</span><span style="color:var(--muted);">⏱ 1h 52min</span></div>
+      <div class="modal-genres"><span class="genre-pill">ANIME</span><span class="genre-pill">ACCIÓN</span></div>
+      <p class="modal-desc">Una megaciudad es invadida por seres de otra dimensión y solo una joven con poderes inestables puede cerrar la brecha entre mundos. Animación de última generación y narrativa que redefine el género.</p>
+      <div class="modal-btns"><a href="#" class="btn-modal-play">▶ REPRODUCIR AHORA</a><a href="#" class="btn-info" style="display:inline-block;">+ MI LISTA</a></div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-10" class="modal-backdrop">
+  <div class="modal-box">
+    <div class="modal-hero"><img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=900&q=80" alt=""><div class="modal-hero-grad"></div><a href="#" class="modal-close">×</a></div>
+    <div class="modal-body">
+      <div class="hero-tags" style="margin-bottom:12px;"><span class="tag tag-new">NUEVO</span></div>
+      <div class="modal-title">PROFUNDIDAD</div>
+      <div class="modal-meta"><span style="color:var(--gold);font-size:16px;font-weight:700;">★★★★ 8.5/10</span><span style="color:var(--muted);">2023</span><span style="color:var(--muted);">⏱ 2h 24min</span></div>
+      <div class="modal-genres"><span class="genre-pill">THRILLER</span><span class="genre-pill">AMBIENTAL</span></div>
+      <p class="modal-desc">Un periodista de investigación expone la conspiración más grande de la industria petrolera mientras huye de sicarios en alta mar. Un thriller de adrenalina pura con un mensaje urgente para nuestro tiempo.</p>
+      <div class="modal-btns"><a href="#" class="btn-modal-play">▶ REPRODUCIR AHORA</a><a href="#" class="btn-info" style="display:inline-block;">+ MI LISTA</a></div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-11" class="modal-backdrop">
+  <div class="modal-box">
+    <div class="modal-hero"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80" alt=""><div class="modal-hero-grad"></div><a href="#" class="modal-close">×</a></div>
+    <div class="modal-body">
+      <div class="hero-tags" style="margin-bottom:12px;"><span class="tag tag-exclusive">EXCLUSIVO</span></div>
+      <div class="modal-title">EL REINO DE VIDRIO</div>
+      <div class="modal-meta"><span style="color:var(--gold);font-size:16px;font-weight:700;">★★★★ 8.3/10</span><span style="color:var(--muted);">2024</span><span style="color:var(--muted);">⏱ 2h 05min</span></div>
+      <div class="modal-genres"><span class="genre-pill">FANTASÍA</span><span class="genre-pill">ROMANCE</span></div>
+      <p class="modal-desc">En un reino donde las emociones se cristalizan y pueden romperse, una alquimista busca el antídoto para el corazón del príncipe. Una historia de amor que desafía las leyes de la magia y la razón.</p>
+      <div class="modal-btns"><a href="#" class="btn-modal-play">▶ REPRODUCIR AHORA</a><a href="#" class="btn-info" style="display:inline-block;">+ MI LISTA</a></div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-12" class="modal-backdrop">
+  <div class="modal-box">
+    <div class="modal-hero"><img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=900&q=80" alt=""><div class="modal-hero-grad"></div><a href="#" class="modal-close">×</a></div>
+    <div class="modal-body">
+      <div class="hero-tags" style="margin-bottom:12px;"><span class="tag tag-trending">TENDENCIA</span></div>
+      <div class="modal-title">ENTRE PISOS</div>
+      <div class="modal-meta"><span style="color:var(--gold);font-size:16px;font-weight:700;">★★★★ 8.1/10</span><span style="color:var(--muted);">2024</span><span style="color:var(--muted);">⏱ 1h 47min</span></div>
+      <div class="modal-genres"><span class="genre-pill">COMEDIA</span><span class="genre-pill">DRAMA</span></div>
+      <p class="modal-desc">Seis desconocidos quedan atrapados en un ascensor en Manhattan durante un apagón histórico. Doce horas que cambian sus vidas para siempre. Una comedia dramática que captura la humanidad en sus momentos más inesperados.</p>
+      <div class="modal-btns"><a href="#" class="btn-modal-play">▶ REPRODUCIR AHORA</a><a href="#" class="btn-info" style="display:inline-block;">+ MI LISTA</a></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
